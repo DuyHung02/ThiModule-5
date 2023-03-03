@@ -1,0 +1,26 @@
+<button routerLink="/create">Thêm mới</button>
+<hr>
+<div class="container mt-3" *ngFor="let t of tours">
+  <h2>Striped Rows</h2>
+  <p>The .table-striped class adds zebra-stripes to a table:</p>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID:</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{t.id}}</td>
+      <td><a routerLink="/detail">{{t.name}}</a></td>
+      <td>{{t.price}}</td>
+      <td><a class="btn btn-success" routerLink="/tour/edit/{{t.id}}"></a></td>
+      <td><a class="btn btn-success" routerLink="/tour/delete/{{t.id}}"></a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
